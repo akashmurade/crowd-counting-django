@@ -147,6 +147,32 @@ footer {
     margin-top: 3rem;
 }
 
+/* Model Selection Styles */
+.model-selection {
+    margin: 1.5rem 0;
+}
+
+.btn-group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.btn-check:checked + .btn-outline-primary {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.btn-outline-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: rgba(67, 97, 238, 0.1);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .results-grid {

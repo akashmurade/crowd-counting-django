@@ -43,4 +43,17 @@ document.addEventListener('DOMContentLoaded', function() {
             reader.readAsDataURL(file);
         });
     }
+
+    // Model selection active state
+    const modelButtons = document.querySelectorAll('.btn-check');
+    modelButtons.forEach(btn => {
+        btn.addEventListener('change', function() {
+            const label = document.querySelector(`label[for="${this.id}"]`);
+            document.querySelectorAll('.btn-outline-primary').forEach(l => {
+                l.classList.remove('active-model');
+            });
+            label.classList.add('active-model');
+        });
+    });
 });
+
